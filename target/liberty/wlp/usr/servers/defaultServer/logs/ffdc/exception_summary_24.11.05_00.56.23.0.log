@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1 05.11.2024, 00:56:23:176 CET 05.11.2024, 00:56:23:176 CET java.lang.NullPointerException com.ibm.ws.uow.UOWManagerImpl.runUnderCurrentUOW 1130
+                                                                            - C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_24.11.05_00.56.23.0.log
+------+------+---------------------------+---------------------------+---------------------------

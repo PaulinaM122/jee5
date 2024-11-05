@@ -1,0 +1,80 @@
+# Get all brands
+GET http://localhost:9080/perfumes/api/brands
+
+###
+
+# Get single brand
+GET http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e
+
+###
+
+# Create a new brand
+PUT http://localhost:9080/perfumes/api/brands/d8b50a43-ed45-4441-9bcb-5db7782b47f6
+Content-Type: application/json
+
+{
+  "name": "New Brand Name",
+  "description": "Description of the new brand"
+}
+
+###
+
+# Update an existing brand
+PATCH http://localhost:9080/perfumes/api/brands/d8b50a43-ed45-4441-9bcb-5db7782b47f6
+Content-Type: application/json
+
+{
+  "name": "Updated Brand Name",
+  "description": "Updated description of the brand"
+}
+
+###
+
+# Delete a brand
+DELETE http://localhost:9080/perfumes/api/brands/d8b50a43-ed45-4441-9bcb-5db7782b47f6
+
+###
+
+# Get all perfumes within a brand
+GET http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e/perfumes
+
+###
+
+# Create a new perfume within a brand
+PUT http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e/perfumes/3c6f1eb1-8069-44ab-988f-d7fed2b65d86
+Content-Type: application/json
+
+{
+ "name": "Coco special",
+  "description": "The main perfume of this brand",
+  "releaseDate": "Tue Oct 08 04:45:08 CEST 2024",
+  "price": 1200.0,
+  "scentType": "FLORAL"
+}
+
+###
+
+# Update an existing perfume within a brand
+PATCH http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e/perfumes/3c6f1eb1-8069-44ab-988f-d7fed2b65d86
+Content-Type: application/json
+
+{
+  "name": "Coco special",
+  "price": 1800.0,
+  "scentType": "FLORAL"
+}
+
+###
+
+# Delete a perfume within a brand
+DELETE http://localhost:9080/perfumes/api/brands/b7d9c9be-8dfd-426b-826f-4715f88c2f2e/perfumes/3c6f1eb1-8069-44ab-988f-d7fed2b65d86
+
+###
+
+# Get all perfumes across all brands
+GET http://localhost:9080/perfumes/api/perfumes
+
+###
+
+# Get a single perfume by ID
+GET http://localhost:9080/perfumes/api/perfumes/3c6f1eb1-8069-44ab-988f-d7fed2b65d86

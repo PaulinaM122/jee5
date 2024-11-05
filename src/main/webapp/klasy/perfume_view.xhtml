@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:f="jakarta.faces.core"
+                template="/WEB-INF/template/main.xhtml">
+
+    <f:metadata>
+        <f:viewParam name="id" value="#{perfumeView.id}" required="true"/>
+        <f:viewAction action="#{perfumeView.init()}"/>
+    </f:metadata>
+
+    <ui:define name="content">
+        <article>
+            <header><h2><h:outputText value="#{perfumeView.perfume.name}"/></h2></header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Brand
+                            </div>
+                            <div class="col-6">
+                                <h:outputText value="#{perfumeView.perfume.brand}"/>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Description
+                            </div>
+                            <div class="col-6">
+                                <h:outputText value="#{perfumeView.perfume.description}"/>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Price
+                            </div>
+                            <div class="col-6">
+                                <h:outputText value="#{perfumeView.perfume.price}"/>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Release date
+                            </div>
+                            <div class="col-6">
+                                <h:outputText value="#{perfumeView.perfume.releaseDate}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <dir sourceOnDisk="C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\src\main\webapp" targetInArchive="/"/>
+    <dir sourceOnDisk="C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\classes" targetInArchive="/WEB-INF/classes"/>
+    <file sourceOnDisk="C:\Users\pauli\.m2\repository\org\webjars\npm\mdb-ui-kit\6.4.0\mdb-ui-kit-6.4.0.jar" targetInArchive="/WEB-INF/lib/mdb-ui-kit-6.4.0.jar"/>
+    <file sourceOnDisk="C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\tmp\META-INF\MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
+</archive>

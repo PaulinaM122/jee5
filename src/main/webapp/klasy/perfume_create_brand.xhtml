@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:f="jakarta.faces.core"
+                template="/WEB-INF/template/main.xhtml">
+
+    <f:metadata>
+        <f:viewAction action="#{perfumeCreate.init()}"/>
+    </f:metadata>
+
+    <ui:define name="content">
+        <article>
+            <header><h2>Select Brand</h2></header>
+            <h:form styleClass="container" onreset="onReset()" enctype="multipart/form-data">
+
+                <div class="row">
+                    <div class="col-4 p-2">
+                        <fieldset>
+                            <legend class="form-label fs-6">Select Brand:</legend>
+                            <ui:repeat value="#{perfumeCreate.brands}" var="brand">
+                                <div class="form-check">
+                                    <h:selectOneRadio id="radioId" group="brand"
+                                                      value="#{perfumeCreate.perfume.brand}"
+                                                      styleClass="form-check-input"
+                                                      enabledClass="form-check-label">
+                                        <f:selectItem itemValue="#{brand}" itemLabel="#{brand.name}"/>
+                                    </h:selectOneRadio>
+                                </div>
+                            </ui:repeat>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="col-2 p-2 text-center">
+                    <h:commandButton styleClass="btn" value="Previous" immediate="true"
+                                     action="#{perfumeCreate.goToBasicAction()}"/>
+                </div>
+                <div class="col-2 p-2 text-center">
+                    <h:commandButton styleClass="btn" value="Next"
+                                     action="#{perfumeCreate.goToConfirmAction()}"/>
+                </div>
+            </h:form>
+        </article>
+    </ui:define>
+</ui:composition>

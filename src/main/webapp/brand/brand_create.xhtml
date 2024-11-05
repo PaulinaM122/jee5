@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:f="jakarta.faces.core"
+                template="/WEB-INF/template/main.xhtml">
+
+    <f:metadata>
+        <f:viewAction action="#{brandCreate.init()}"/>
+    </f:metadata>
+
+    <ui:define name="content">
+        <article>
+            <header><h2>Create New Brand</h2></header>
+            <h:form styleClass="container">
+                <div class="row">
+                    <div class="col-4 p-2">
+                        <div class="form-outline">
+                            <h:inputText id="brandName" value="#{brandCreate.brand.name}" styleClass="form-control"/>
+                            <h:outputLabel for="brandName" value="Brand Name:" styleClass="form-label"/>
+                        </div>
+                    </div>
+
+                    <div class="col-4 p-2">
+                        <div class="form-outline">
+                            <h:inputText id="brandCountry" value="#{brandCreate.brand.country}" styleClass="form-control"/>
+                            <h:outputLabel for="brandCountry" value="Country:" styleClass="form-label"/>
+                        </div>
+                    </div>
+
+                    <div class="col-4 p-2">
+                        <div class="form-outline">
+                            <h:inputText id="brandDescription" value="#{brandCreate.brand.description}" styleClass="form-control"/>
+                            <h:outputLabel for="brandDescription" value="Description:" styleClass="form-label"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2 p-2 text-center">
+                        <h:commandButton styleClass="btn btn-primary" value="Create"
+                                         action="#{brandCreate.saveAction()}"/>
+                    </div>
+                    <div class="col-2 p-2 text-center">
+                        <h:commandButton styleClass="btn btn-secondary" value="Cancel"
+                                         action="#{brandCreate.cancelAction()}"/>
+                    </div>
+                </div>
+            </h:form>
+        </article>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:f="jakarta.faces.core"
+                template="/WEB-INF/template/main.xhtml">
+
+    <f:metadata>
+        <f:viewAction action="#{perfumeCreate.init()}"/>
+    </f:metadata>
+
+    <ui:define name="content">
+        <article>
+            <header><h2>Create New Perfume - Basic Information</h2></header>
+            <h:form styleClass="container" onreset="onReset()" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-4 p-2">
+                        <div class="form-outline">
+                            <h:inputText id="name" value="#{perfumeCreate.perfume.name}" styleClass="form-control"/>
+                            <h:outputLabel for="name" value="Perfume Name:" styleClass="form-label"/>
+                        </div>
+                    </div>
+
+                    <div class="col-4 p-2">
+                        <div class="form-outline">
+                            <h:inputText id="price" value="#{perfumeCreate.perfume.price}" styleClass="form-control"/>
+                            <h:outputLabel for="price" value="Price:" styleClass="form-label"/>
+                        </div>
+                    </div>
+
+                    <div class="col-4 p-2">
+                        <div class="form-outline">
+                            <h:inputText id="releaseDate"
+                                         value="#{perfumeCreate.perfume.releaseDate}"
+                                         styleClass="form-control"
+                                         converter="jakarta.faces.DateTime">
+                                <f:convertDateTime pattern="yyyy-MM-dd" />
+                            </h:inputText>
+                            <h:outputLabel for="releaseDate" value="Release Date:" styleClass="form-label"/>
+                        </div>
+                    </div>
+
+                    <div class="col-4 p-2">
+                        <div class="form-outline">
+                            <h:inputTextarea id="description" value="#{perfumeCreate.perfume.description}"
+                                             styleClass="form-control" rows="4"/>
+                            <h:outputLabel for="description" value="Description:" styleClass="form-label"/>
+                        </div>
+                    </div>
+
+                    <div class="col-4 p-2">
+                        <div class="form-outline">
+                            <h:outputLabel for="scentType" value="Scent Type:" styleClass="form-label"/>
+                            <div class="mt-2">
+                                <h:selectOneRadio id="scentType" value="#{perfumeCreate.perfume.scentType}" layout="pageDirection" styleClass="form-check">
+                                    <f:selectItems value="#{perfumeCreate.scentTypes}" var="scent"
+                                                   itemValue="#{scent}" itemLabel="#{scent}" />
+                                </h:selectOneRadio>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-2 p-2 text-center">
+                        <h:button styleClass="btn" value="Previous" disabled="true"/>
+                    </div>
+                    <div class="col-2 p-2 text-center">
+                        <h:commandButton styleClass="btn" value="Next"
+                                         action="#{perfumeCreate.goToBrandAction()}"/>
+                    </div>
+                </div>
+            </h:form>
+        </article>
+    </ui:define>
+</ui:composition>

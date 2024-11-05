@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liberty-plugin-config>
+    <activeBuildProfiles>
+        <profileId>liberty</profileId>
+    </activeBuildProfiles>
+    <installDirectory>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\liberty\wlp</installDirectory>
+    <serverDirectory>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\liberty\wlp\usr\servers\defaultServer</serverDirectory>
+    <userDirectory>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\liberty\wlp\usr</userDirectory>
+    <serverOutputDirectory>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\liberty\wlp\usr\servers\defaultServer</serverOutputDirectory>
+    <serverName>defaultServer</serverName>
+    <configDirectory>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\src\main\liberty\config</configDirectory>
+    <configFile>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\src\main\liberty\config\server.xml</configFile>
+    <appsDirectory>dropins</appsDirectory>
+    <looseApplication>true</looseApplication>
+    <stripVersion>false</stripVersion>
+    <installAppPackages>project</installAppPackages>
+    <applicationFilename>lab1-1.0-SNAPSHOT.war.xml</applicationFilename>
+    <assemblyArtifact>
+        <groupId>io.openliberty</groupId>
+        <artifactId>openliberty-kernel</artifactId>
+        <version>24.0.0.11</version>
+        <type>zip</type>
+    </assemblyArtifact>
+    <assemblyArchive>C:\Users\pauli\.m2\repository\io\openliberty\openliberty-kernel\24.0.0.11\openliberty-kernel-24.0.0.11.zip</assemblyArchive>
+    <assemblyInstallDirectory>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\liberty</assemblyInstallDirectory>
+    <refresh>false</refresh>
+    <installAppsConfigDropins>C:\Users\pauli\OneDrive\Pulpit\semestr 7\Jee\lab5\jee5\jee4-master\Jee4\target\liberty\wlp\usr\servers\defaultServer\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <projectType>war</projectType>
+    <projectCompileDependency>org.webjars.npm:mdb-ui-kit:6.4.0</projectCompileDependency>
+</liberty-plugin-config>
